@@ -15,6 +15,8 @@ def average(test_1, test_2, test_3):
         raise ValueError
     elif int(test_2) < 0:
         raise ValueError
+    elif int(test_3) < 0:
+        raise ValueError
     else:
         average_score = (int(test_1) + int(test_2) + int(test_3)) / 3
         return float(average_score)
