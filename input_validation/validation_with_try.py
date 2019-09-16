@@ -10,12 +10,12 @@ Then it is to take the three scores, find the average, and store it into a varia
 """
 
 
-def average():
-    # Get input for scores
-    test_1 = input('Please enter the score for test 1: ')
-    test_2 = input('Please enter the score for test 2: ')
-    test_3 = input('Please enter the score for test 3: ')
-    return (int(test_1) + int(test_2) + int(test_3)) / 3  # calculation using score1, score2, and score 3
+def average(test_1, test_2, test_3):
+    if int(test_1) < 0:
+        raise ValueError
+    else:
+        average_score = (int(test_1) + int(test_2) + int(test_3)) / 3
+        return float(average_score)
 
 
 if __name__ == '__main__':
@@ -23,9 +23,9 @@ if __name__ == '__main__':
     first_name = input('Please enter your first name: ')
     age = input('Please enter your age: ')
 
-    average_scores = average()
+    average_scores = average(85, 90, 95)
 
-    print(last_name + ', ' + first_name + ' age: ' + age + ' grade: {0:.2f}' .format(average_scores))
+    print(last_name + ', ' + first_name + ' age: ' + age + ' grade: ' + str(average_scores))
     # inputs:
     # Please enter your last name: Pfander
     # Please enter your first name: Colten
