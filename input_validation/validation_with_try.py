@@ -26,16 +26,18 @@ if __name__ == '__main__':
     last_name = input('Please enter your last name: ')
     first_name = input('Please enter your first name: ')
     age = input('Please enter your age: ')
+    try:
+        average_scores = average(85, 90, 95)
 
-    average_scores = average(85, 90, 95)
-
-    print(last_name + ', ' + first_name + ' age: ' + age + ' grade: ' + str(average_scores))
-    # inputs:
-    # Please enter your last name: Pfander
-    # Please enter your first name: Colten
-    # Please enter your age: 23
-    # Please enter the score for test 1: 92
-    # Please enter the score for test 2: 91
-    # Please enter the score for test 3: 97
-    # output:
-    # Pfander, Colten age: 23 grade: 93.33
+        print(last_name + ', ' + first_name + ' age: ' + age + ' grade: ' + str(average_scores))
+        # inputs:
+        # Please enter your last name: Pfander
+        # Please enter your first name: Colten
+        # Please enter your age: 23
+        # Please enter the score for test 1: 92
+        # Please enter the score for test 2: 91
+        # Please enter the score for test 3: 97
+        # output:
+        # Pfander, Colten age: 23 grade: 93.33
+    except ValueError:
+        print("An exception has occurred. Please only enter positive test results. Negatives are not allowed.")
