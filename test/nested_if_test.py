@@ -39,6 +39,24 @@ class MyTestCase(unittest.TestCase):
     def test_price_10_to_under_30_10_off_20_percent(self):
         self.assertEqual(nested_if_statement.calculate_order(20, 10, .20), 16.43)
 
+    def test_price_30_to_under_50_5_off_10_percent(self):
+        self.assertEqual(nested_if_statement.calculate_order(40, 5, .10), 45.34)
+
+    def test_price_30_to_under_50_5_off_15_percent(self):
+        self.assertEqual(nested_if_statement.calculate_order(40, 5, .15), 43.49)
+
+    def test_price_30_to_under_50_5_off_20_percent(self):
+        self.assertEqual(nested_if_statement.calculate_order(40, 5, .20), 41.63)
+
+    def test_price_30_to_under_50_10_off_10_percent(self):
+        self.assertEqual(nested_if_statement.calculate_order(40, 10, .10), 40.57)
+
+    def test_price_30_to_under_50_10_off_15_percent(self):
+        self.assertEqual(nested_if_statement.calculate_order(40, 10, .15), 38.98)
+
+    def test_price_30_to_under_30_50_off_20_percent(self):
+        self.assertEqual(nested_if_statement.calculate_order(40, 10, .20), 37.39)
+
 
 if __name__ == '__main__':
     unittest.main()
