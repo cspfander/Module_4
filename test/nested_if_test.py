@@ -43,7 +43,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(nested_if_statement.calculate_order(40, 5, .10), 45.34)
 
     def test_price_30_to_under_50_5_off_15_percent(self):
-        self.assertEqual(nested_if_statement.calculate_order(40, 5, .15), 43.49)
+        self.assertEqual(nested_if_statement.calculate_order(40, 5, .15), 43.48)
 
     def test_price_30_to_under_50_5_off_20_percent(self):
         self.assertEqual(nested_if_statement.calculate_order(40, 5, .20), 41.63)
