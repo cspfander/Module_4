@@ -13,6 +13,8 @@ Then it is to take the three scores, find the average, and store it into a varia
 def average(test_1, test_2, test_3):
     if int(test_1) < 0:
         raise ValueError
+    elif int(test_2) < 0:
+        raise ValueError
     else:
         average_score = (int(test_1) + int(test_2) + int(test_3)) / 3
         return float(average_score)
