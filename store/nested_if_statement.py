@@ -12,11 +12,10 @@ the cash coupon, the percent coupon, and calculate and return the total order it
 
 def calculate_order(price, cash_coupon, percent_coupon):
     tax_rate = 0.06
-    total_order = 0
     if price < 10:
         shipping = 5.95
         if cash_coupon == 5:
-            price = price - 5
+            price = price - cash_coupon
             price = price - (price * percent_coupon)
             total_order = price + (price * tax_rate) + shipping
             return round(total_order, 2)
