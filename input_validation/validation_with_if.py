@@ -15,7 +15,15 @@ def average():
     test_1 = input('Please enter the score for test 1: ')
     test_2 = input('Please enter the score for test 2: ')
     test_3 = input('Please enter the score for test 3: ')
-    return (int(test_1) + int(test_2) + int(test_3)) / 3  # calculation using score1, score2, and score 3
+    average_score = (int(test_1) + int(test_2) + int(test_3)) / 3  # calculation using score1, score2, and score 3
+    if int(test_1) < 0:
+        return -1
+    elif int(test_2) < 0:
+        return -1
+    elif int(test_3) < 0:
+        return -1
+    else:
+        return average_score
 
 
 if __name__ == '__main__':
